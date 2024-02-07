@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using sql_api.Model;
 using sql_api.ViewModel;
 
@@ -10,8 +10,11 @@ namespace sql_api.Controllers
     public class UsuariosController : ControllerBase
     {
         private readonly IUsuariosRepository _usuariosRepository;
+        /*apos essa linha, eu crio um constructor, Clicando no UsuariosController na linha 10 com o botão direito
+        depois vamos em "AÇÕES RAPIDAS E REFATORAÇÕES ou apertamos CTRL +" E em "gerar constructor" 
+        */
 
-        public UsuariosController(IUsuariosRepository usuariosRepository)
+        public UsuariosController(IUsuariosRepository usuariosRepository) 
         {
             _usuariosRepository = usuariosRepository ?? throw new ArgumentNullException(nameof(usuariosRepository));    
         }
